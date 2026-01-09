@@ -86,6 +86,7 @@ fn main() {
         let pb = ProgressBar::new(filtered_crawls.len() as u64);
         pb.set_style(ProgressStyle::default_bar()
             .template("{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos:>7}/{len:7} {msg}")
+            .unwrap()
             .progress_chars("#>-"));
 
         for crawl in filtered_crawls {
